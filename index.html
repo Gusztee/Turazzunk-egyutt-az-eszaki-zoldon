@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Facebook Share Properties -->
+    <meta property="og:url"           content="https://www.web-repo1.vercel.app/index.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Document" />
+    <meta property="og:description"   content="Google Maps API project" />
+    <meta property="og:image"         content="https://web-repo1.vercel.app/image/test-image1.jpg" />
+    
+    <title>Document</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://kit.fontawesome.com/afaf36f203.js" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='data/config.js'></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    
+    <script type="text/javascript" src="data/placeData.js"></script>
+    <script type="text/javascript" src="scripts/default.js"></script>
+    <script type="text/javascript" src="scripts/map.js"></script>
+    <script type="text/javascript" src="scripts/slideshow.js"></script>
+    <script type="text/javascript" src="scripts/details.js"></script>
+    
+
+</head>
+
+<body>
+    
+    <!-- Helyszínválasztó legördülő menü-->
+    
+    <div id="location-panel">
+        <b>Helyszín: </b>
+        <select id="location-select">
+            <!-- Generált elemek helye -->
+        </select>
+    </div>
+
+    <!-- Helyszín léptető gomb és fókusz gomb-->
+
+    <div class="location-buttons">
+        <button id="focus-button" class="location-button">&#10095; Fókusz &#10094;</button>
+        <button class="location-button" onclick="nextLocation(-1)">&#10094; Előző állomás</button>
+        <button class="location-button" onclick="nextLocation(1)">Következő állomás &#10095;</button>
+    </div>
+
+    <!-- Overlay -->
+
+    <div class="details-overlay"></div>
+    
+    <!-- Leírás ablak -->
+
+    <div class="details-container">
+        
+        <!-- Slideshow -->
+        
+        <div class="slideshow-container">
+            <!-- Generált elemek helye -->
+        </div>
+        
+        <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+        <a class="next" onclick="nextSlide(1)">&#10095;</a>
+        
+        <div class="dot-container">
+            <!-- Generált elemek helye -->
+        </div>
+
+        <div class="details-text-container">
+
+            <div class="close-button" onclick="closeOverlay()">
+                <i class="fa-solid fa-xmark fa-lg"></i>
+            </div>
+            
+            <div class="details-header">
+                <!-- Generált elemek helye -->
+            </div>
+
+            <h1 class="details-title"></h1>
+            <div class="details-description"></div>
+            
+            <!-- to do: share buttons -->
+            <div class="share-container">
+    
+                <!-- Generált elemek helye -->
+
+            </div>
+
+        </div>
+        
+    </div>
+    
+    <!-- Térkép -->
+    
+    <div id="map"></div>
+
+    <!-- Social Media Share -->
+    
+    <div class="floating-share-container">
+
+        <div id="fb-root"></div>
+        <script src="scripts/fb-share.js"></script>
+        <!-- Your share button code -->
+        <div class="fb-share-button"
+            data-href="https://web-repo1.vercel.app/index.html" 
+            data-layout="button_count">
+        </div>
+
+    </div>
+    
+    <!-- Scriptek-->
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA5b1s8CF9P6IcdApwnu4-QQkmWQG8KD4&callback=initMap&v=weekly" async></script>
+
+    <!-- A térkép szkript ide generálódik -->
+    
+</body>
+
+</html>
