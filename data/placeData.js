@@ -1,11 +1,11 @@
-function getData() {
-    return data;
-}
-
+// --- Adott helyszín adataival tér vissza ---
+// index: a helyszín sorszáma a tömbben
 function getLocationData(index) {
     return data[index];
 }
 
+// --- A helyszín neve alapján megkeresi a tömbbeli sorszámát ---
+// location: a helyszín neve
 function getLocationIndex(location) {
     for(var i = 0; i < data.length; i++) {
         if(data[i].title == location) return i;
@@ -13,6 +13,11 @@ function getLocationIndex(location) {
     return 0;
 }
 
+// --- A helyszínek adatait tartalmazó adatszerkezet ---
+// title: a helyszín neve
+// lat és lng: szélességi és hosszúsági koordináták
+// image: objektum a helyszínhez tartozó képek elérési útjaival
+// description: leírás a helyszínről
 const data = [
     {
         "title": "",
@@ -160,5 +165,4 @@ const data = [
         },
         "description": "<p>Visszasétálva az Ózd felé vezető útra a lankás domboldalon tavasszal csodás héricsmezőben gyönyörködhetünk. A dombot könnyen megismerjük a rajta lévő telefon átjátszó toronyról.</p><p> Utunkat Ózd-Szentsimon részén fejezzük be.... itt egy Árpád-kori kicsi templom zárja utunkat.</p><p> A templom freskói 1423-ban készültek, és Júdás Tádé és Simon  apostolok tiszteletére lett felavatva. A famennyezete miatt különösen ismert a művészettörténészek körében.</p><p>Római katolikus temploma arról nevezetes, hogy festményeit Feszty Masa  Feszty Árpád lánya készítette és a helyi lakosokról mintázta az alakokat.</p>",
     },
-
 ];
