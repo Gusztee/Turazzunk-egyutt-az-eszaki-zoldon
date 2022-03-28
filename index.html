@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Facebook Share Properties -->
+    <!-- Facebook megosztás beállításai -->
     <meta property="og:url"           content="https://www.web-repo1.vercel.app/index.html" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Document" />
@@ -16,35 +16,38 @@
     <meta property="og:image"         content="https://web-repo1.vercel.app/image/test-image1.jpg" />
     
     <title>Document</title>
+    <meta name="author" content="Beri Bendegúz, Barna Dániel" />
     
+    <!-- A Google térkép kirajzolásához szükséges szkript -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- Szkript a Font Awesome karakterek megjelenítéséhez -->
     <script src="https://kit.fontawesome.com/afaf36f203.js" crossorigin="anonymous"></script>
-    <script type='text/javascript' src='data/config.js'></script>
 
-    
+    <!-- Saját CSS fájlok -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    
-    <script type="text/javascript" src="data/placeData.js"></script>
-    <script type="text/javascript" src="scripts/default.js"></script>
-    <script type="text/javascript" src="scripts/map.js"></script>
-    <script type="text/javascript" src="scripts/slideshow.js"></script>
-    <script type="text/javascript" src="scripts/details.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="styles/slideshow.css" />
+
+    <!-- Saját JS fájlok -->
+    <script src="data/placeData.js"></script>
+    <script src="scripts/default.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/details.js"></script>
 
 </head>
 
 <body>
     
-    <!-- Helyszínválasztó legördülő menü-->
+    <!-- Helyszínválasztó legördülő lista-->
     
     <div id="location-panel">
         <b>Helyszín: </b>
         <select id="location-select">
-            <!-- Generált elemek helye -->
+            <!-- Generált. Legördülő lista opciók -->
         </select>
     </div>
 
-    <!-- Helyszín léptető gomb és fókusz gomb-->
+    <!-- Helyszín léptető gombok és fókusz gomb-->
 
     <div class="location-buttons">
         <button id="focus-button" class="location-button">&#10095; Fókusz &#10094;</button>
@@ -63,51 +66,48 @@
         <!-- Slideshow -->
         
         <div class="slideshow-container">
-            <!-- Generált elemek helye -->
+            <!-- Generált. A Slideshow képei -->
         </div>
         
         <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
         <a class="next" onclick="nextSlide(1)">&#10095;</a>
         
         <div class="dot-container">
-            <!-- Generált elemek helye -->
+            <!-- Generált. Képváltó pontok -->
         </div>
+
+        <!-- Leírás ablak szöveg oldala -->
 
         <div class="details-text-container">
 
+            <!-- Bezárás gomb -->
             <div class="close-button" onclick="closeOverlay()">
                 <i class="fa-solid fa-xmark fa-lg"></i>
             </div>
             
-            <div class="details-header">
-                <!-- Generált elemek helye -->
-            </div>
-
-            <h1 class="details-title"></h1>
-            <div class="details-description"></div>
             
-            <!-- to do: share buttons -->
-            <div class="share-container">
-    
-                <!-- Generált elemek helye -->
-
+            <div class="details-header">
+                <!-- Generált. Leírás cím -->
             </div>
+
+            <!-- Címsor és leírás-->
+            <h1 class="details-title"><!-- Generált tartalom --></h1> 
+            <div class="details-description"><!-- Generált tartalom --></div>
 
         </div>
         
     </div>
     
     <!-- Térkép -->
-    
     <div id="map"></div>
 
-    <!-- Social Media Share -->
-    
+    <!-- Megosztás -->
     <div class="floating-share-container">
 
         <div id="fb-root"></div>
         <script src="scripts/fb-share.js"></script>
-        <!-- Your share button code -->
+        
+        <!-- Megosztás gomb -->
         <div class="fb-share-button"
             data-href="https://web-repo1.vercel.app/index.html" 
             data-layout="button_count">
@@ -115,12 +115,10 @@
 
     </div>
     
-    <!-- Scriptek-->
+    <!-- Google térkép szkripje-->
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA5b1s8CF9P6IcdApwnu4-QQkmWQG8KD4&callback=initMap&v=weekly" async></script>
 
-    <!-- A térkép szkript ide generálódik -->
-    
 </body>
 
 </html>

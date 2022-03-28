@@ -1,6 +1,6 @@
 // --- Adattagok ---
 
-// Overlay
+// Leírás ablak
 var detailsOverlay;
 var detailsConntainer;
 var detailsHeader;
@@ -8,21 +8,21 @@ var detailsTitle;
 var deatailsDescription;
 var alertMessage;
 
+// Kezelő eszközök
 var locationSelect;
 var focusButton;
 
+// Slideshow
 var slideshowContainer;
 var dotContainer;
 
-var optionIndex = 0;
-
-// Inicializálás
+// --- Inicializálás ---
 
 window.onload = function() {
 
   gatherReferences();
   
-  // Helyszín legördülő menü feltöltés
+  // Helyszín legördülő lista feltöltés
 
   for(var i = 0; i < data.length; i++) {
     var option = document.createElement("option");
@@ -31,13 +31,14 @@ window.onload = function() {
     locationSelect.add(option, null);
   }
   
-  // Overlay
+  // Leírás ablak bezáró esemény
   detailsOverlay.addEventListener("click", () => {
     detailsOverlay.classList.remove("show-details");
     detailsConntainer.classList.remove("show-details");
   });
 };
 
+// --- Hivatkozások gyűjtése ---
 function gatherReferences() {
   detailsOverlay = document.querySelector(".details-overlay");
   detailsConntainer = document.querySelector(".details-container");
@@ -51,28 +52,24 @@ function gatherReferences() {
   dotContainer = document.querySelector(".dot-container");
 }
 
-function getOptionIndex() {
-    for (var i = 0; i < locationSelect.length; i++) {
-        if (locationSelect[i].text === locationSelect.value){
-            return i;
-        }
-    }
-    return 0;
-}
-
+// --- Szöveg másolása vágólapra ---
 function copyTextToClipboard(text) {
   navigator.clipboard.writeText(text).then(function() {
     alertMessage.classList.replace("hide", "show");
   });
 }
 
+// --- Üzenet bezárása ---
 function closeAlert() {
   alertMessage.classList.replace("show", "hide");
 }
 
+// --- Érték változásának vizsgálata, következő érték meghatározása ---
+// n: változás mértéke
+// current: aktuális érték
+// max: a tartomány felső határa
 function chooseNextValue(n, current, max) {
-  if(current + n < 0) var value = max - 1;
-  else if(current + n >= max) value = 0;
-  else value = current + n;
-  return value;
+  if(current + n < 0) return max - 1;
+  if(current + n >= max) return 0;
+  return current + n;
 }
