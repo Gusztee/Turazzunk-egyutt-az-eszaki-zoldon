@@ -118,11 +118,13 @@
 
 /* Tablet nézet */
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 650px) and (max-width: 1024px) {
 
     .slideshow-container {
         height: 100%;
-        width: 100%;
+        min-height: 50vh;
+        width: 100vw;
+        overflow: auto;
     }
 
     .slideshow {
@@ -167,7 +169,7 @@
     .prev {
         cursor: pointer;
         position: absolute;
-        top: 25%;
+        top: 33%;
         left: 0;
         width: auto;
         padding: 16px;
@@ -184,7 +186,7 @@
     .next {
         cursor: pointer;
         position: absolute;
-        top: 25%;
+        top: 33%;
         right: 0;
         width: auto;
         padding: 16px;
@@ -241,8 +243,10 @@
 @media screen and (max-width: 650px) {
 
     .slideshow-container {
-        
-        width: 100%;
+        height: 100%;
+        min-height: 50vh;
+        width: 100vw;
+        overflow: auto;
     }
 
     .slideshow {
@@ -258,11 +262,13 @@
     }
 
     .cover {
-        object-fit: cover;
+        max-width: 100vw;
+        height: auto !important;
     }
 
     .contain {
-        object-fit: contain;
+        max-height: 100vh;
+        width: auto !important;
     }
 
     .fade {
