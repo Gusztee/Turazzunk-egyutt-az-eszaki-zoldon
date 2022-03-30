@@ -1,7 +1,7 @@
 // --- Adott helyszín adataival tér vissza ---
 // index: a helyszín sorszáma a tömbben
 function getLocationData(index) {
-    return data[index];
+    return index > 0 && index < data.length ? data[index] : data[0];
 }
 
 // --- A helyszín neve alapján megkeresi a tömbbeli sorszámát ---

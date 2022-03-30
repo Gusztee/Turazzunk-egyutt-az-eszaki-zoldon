@@ -65,7 +65,7 @@ function changeLocationMarker() {
   map.setCenter(mapCenter);
   
   // A leírás ablakot megnyitó esemény elhelyezése a markerre.
-  marker.addListener("click", (googleMapsEvent) => {
+  marker.addListener("click", () => {
     showDetails(locationIndex);
   });
 }
