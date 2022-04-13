@@ -163,6 +163,6 @@ const data = [
             "0": "image/szentsimon_kulso.jpg",
             "1": "image/szentsimon_belso.jpg",
         },
-        "description": "<p>Visszasétálva az Ózd felé vezető útra a lankás domboldalon tavasszal csodás héricsmezőben gyönyörködhetünk. A dombot könnyen megismerjük a rajta lévő telefon átjátszó toronyról.</p><p> Utunkat Ózd-Szentsimon részén fejezzük be.... itt egy Árpád-kori kicsi templom zárja utunkat.</p><p> A templom freskói 1423-ban készültek, és Júdás Tádé és Simon  apostolok tiszteletére lett felavatva. A famennyezete miatt különösen ismert a művészettörténészek körében.</p><p>Római katolikus temploma arról nevezetes, hogy festményeit Feszty Masa  Feszty Árpád lánya készítette és a helyi lakosokról mintázta az alakokat.</p>",
+        "description": "<p>Visszasétálva az Ózd felé vezető útra a lankás domboldalon tavasszal csodás héricsmezőben gyönyörködhetünk. A dombot könnyen megismerjük a rajta lévő telefon átjátszó toronyról.</p><p> Utunkat Ózd-Szentsimon részén fejezzük be.... itt egy Árpád-kori kicsi templom zárja utunkat.</p><p> A templom freskói 1423-ban készültek, és Júdás Tádé és Simon  apostolok tiszteletére lett felavatva. A famennyezete miatt különösen ismert a művészettörténészek körében.</p>",
     },
 ];
